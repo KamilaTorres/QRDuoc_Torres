@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>escanear</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">escanear</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Label "ASIGNATURAS" centrado en la parte superior -->
+  <ion-label class="asignaturas-label">ASIGNATURAS</ion-label>
+
+  <!-- Ion-select para seleccionar asignaturas -->
+  <ion-item>
+    <ion-label>Seleccionar Asignaturas</ion-label>
+    <ion-select>
+      <ion-select-option value="matematicas">Matemáticas</ion-select-option>
+      <ion-select-option value="ciencias">Ciencias</ion-select-option>
+      <ion-select-option value="historia">Historia</ion-select-option>
+      <!-- Agrega más opciones según sea necesario -->
+    </ion-select>
+  </ion-item>
+
+  <!-- Cuadrado para la imagen y botón para escanear -->
+  <div class="imagen-cuadrado">
+    <img src="assets/imagenes/qr.jfif" alt="Imagen">
+    <ion-button expand="full" routerLink="/datos">Escanear</ion-button>
+  </div>
+
+  <style>
+    /* CSS para el label y el cuadrado */
+    .asignaturas-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .imagen-cuadrado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .imagen-cuadrado img {
+      width: 200px; /* Ancho de la imagen */
+      height: 200px; /* Altura de la imagen */
+      object-fit: cover; /* Ajustar la imagen al cuadrado */
+    }
+  </style>
+</ion-content>
+
+<!-- Menú de hamburguesa -->
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/inicio">Volver al Inicio</ion-item>
+      <ion-item routerLink="/home">Cerrar Sesión</ion-item>
+      <!-- Agrega más elementos de menú aquí -->
+    </ion-list>
+  </ion-content>
+</ion-menu>

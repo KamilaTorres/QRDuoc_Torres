@@ -1,0 +1,74 @@
+<ion-app>
+  <!-- Menú de hamburguesa -->
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/home">cerrar sesion</ion-item>
+        <ion-item routerLink="/escanear">escanear</ion-item>
+        <!-- Agrega más elementos de menú aquí -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenido principal -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <!-- Contenido de la página de inicio -->
+  <ion-content [fullscreen]="true">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-title>Inicio</ion-title>
+        <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <!-- Columna de la imagen -->
+            <ion-col size="4">
+              <img src="assets/imagenes/qr.jfif" alt="Imagen de la app">
+            </ion-col>
+
+            <!-- Columna del texto -->
+            <ion-col size="8">
+              <h2 style="font-size: 24px; color: #333; margin-bottom: 10px;">¿Cuál es el objetivo de esta app?</h2>
+              <p style="font-size: 16px; line-height: 1.5; color: #666;">
+                El objetivo de esta app es agilizar el proceso de asistencia. Para esto, los estudiantes deben escanear un QR que proyectará el docente. Una vez escaneado, aparecerán la fecha y hora, y deben apretar el botón "Enviar Datos" para que estos les lleguen al docente. De esta forma, se ahorrará tiempo y se evitarán errores de asistencia.
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <!-- Columna del texto -->
+            <ion-col size="8">
+              <h2 style="font-size: 24px; color: #333; margin-bottom: 10px;">¿Qué hacer en casos de problemas?</h2>
+              <p style="font-size: 16px; line-height: 1.5; color: #666;">
+                En caso de haber un mal funcionamiento, puede llamar al número 999999999 para que le demos soporte o le ayudemos a despejar las dudas.
+              </p>
+            </ion-col>
+
+            <!-- Columna de la imagen -->
+            <ion-col size="4">
+              <img src="assets/imagenes/soporte.png" alt="Imagen de la app">
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="background-color: blue;">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenedor del círculo con la imagen en el centro -->
+  <div class="circle-container">
+    <ion-avatar class="circle-avatar">
+      <img src="assets/imagenes/logo.png" alt="Imagen de perfil">
+    </ion-avatar>
+  </div>
+
+  <!-- Campos de entrada para nombre de usuario y contraseña -->
+  <ion-item>
+    <ion-label position="floating">Nombre de Usuario</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <!-- Botón para redirigir a la página de inicio -->
+  <ion-button expand="full" (click)="redirectToInicioPage()">Iniciar Sesión</ion-button>
+
+  <!-- Botón para redirigir a la página de registro (sin cambios) -->
+  <ion-button expand="full" (click)="redirectToPages()">Registrarse</ion-button>
+
+  <style>
+    /* CSS para el círculo y la imagen */
+    .circle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px; /* Altura deseada del círculo */
+    }
+
+    .circle-avatar {
+      width: 150px; /* Diámetro del círculo */
+      height: 150px; /* Diámetro del círculo */
+      border-radius: 50%; /* Forma del círculo */
+    }
+  </style>
+</ion-content>
